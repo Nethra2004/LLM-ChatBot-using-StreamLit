@@ -90,6 +90,9 @@ h1 {
 # API KEY
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
+if not GOOGLE_API_KEY:
+    GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+
 # Setting up Google Gemini-Pro AI model
 gen_ai.configure(api_key=GOOGLE_API_KEY)
 model = gen_ai.GenerativeModel('models/gemini-1.5-pro')
