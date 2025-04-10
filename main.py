@@ -3,7 +3,6 @@ import streamlit as st
 from dotenv import load_dotenv
 import google.generativeai as gen_ai
 
-
 # Loading environment variables
 load_dotenv()
 
@@ -14,7 +13,7 @@ st.set_page_config(
     layout="centered",  # Page layout option
 )
 
-# Inject Custom CSS for styling
+# Injecting Custom CSS for styling
 st.markdown("""
 <style>
 /* Background Animation */
@@ -97,7 +96,6 @@ if not GOOGLE_API_KEY:
 gen_ai.configure(api_key=GOOGLE_API_KEY)
 model = gen_ai.GenerativeModel('models/gemini-1.5-pro')
 
-
 # Function to translate roles between Gemini-Pro and Streamlit terminology
 def translate_role_for_streamlit(user_role):
     if user_role == "model":
@@ -105,11 +103,9 @@ def translate_role_for_streamlit(user_role):
     else:
         return user_role
 
-
 # Initializing chat session in Streamlit if not already present
 if "chat_session" not in st.session_state:
     st.session_state.chat_session = model.start_chat(history=[])
-
 
 # Displaying the chatbot's title on the page
 st.title("🤖 Your AI - Friend !")
