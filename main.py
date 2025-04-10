@@ -85,7 +85,6 @@ h1 {
 </style>
 """, unsafe_allow_html=True)
 
-
 # API KEY
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
