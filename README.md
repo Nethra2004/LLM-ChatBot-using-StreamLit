@@ -1,4 +1,4 @@
-# 🤖 LLM ChatBot using Streamlit
+# 🤖 LLM Chatbot using Streamlit
 
 An interactive AI Chatbot powered by Google's Generative AI (Gemini) API and built with Streamlit. This chatbot features a modern UI with clean chat interface, and dynamic response generation.
 
